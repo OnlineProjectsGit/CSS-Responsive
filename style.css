@@ -1,0 +1,146 @@
+:root {
+    /* FONTS */
+    --playpen-font: 'Playpen Sans', cursive;
+    --tiltneon-font: 'Tilt Neon', sans-serif;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    font-size: 22px;
+    font-family: var(--playpen-font);
+    /* grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, 1fr); */
+    grid-template-areas: 
+        "head head head"
+        "side mainCont mainCont"
+        "side mainCont mainCont"
+        "side mainCont mainCont"
+        "foot foot foot"
+    ;
+}
+
+h1,
+h3 {
+    font-family: var(--tiltneon-font);
+    color: white;
+    text-shadow: 0px 0px 1px black;
+}
+
+header {
+    grid-area: head;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: lightblue;
+}
+.logo {
+    width: 50px;
+    height: 50px;
+    background-color: blue;
+    border-radius: 50%;
+}
+nav {}
+.nav-link {
+    margin: 5px 10px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: font-size 1s, font-weight 2s;
+}
+
+.nav-link:hover {
+    font-size: 1em;
+    font-weight: bolder;
+}
+
+aside {
+    grid-area: side;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: beige;
+}
+.calendar {}
+ul {}
+li {
+    list-style: decimal;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+input {}
+
+button {}
+
+
+main {
+    grid-area: mainCont;
+    text-align: center;
+    background-color: bisque;
+}
+.cards {
+    width: 70%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    border: 2px solid black;
+}
+.card {
+    width: 80px;
+    height: 120px;
+    margin: 10px auto;
+    border: 1px solid black;
+    font-size: 0.8em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+.image {
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+.image-1 {
+    background-color: blue;
+}
+.image-2 {
+    background-color: yellow;
+}
+.image-3 {
+    background-color: green;
+}
+.image-4 {
+    background-color: brown;
+}
+.image-5 {
+    background-color: orange;
+}
+
+footer {
+    grid-area: foot;
+    text-align: center;
+    background-color: burlywood;
+}
+
+
+@media screen and (max-width: 630px) {
+    .cards {
+        flex-direction: column;
+        /* border: 3px solid red; */
+    }
+}
+
+
